@@ -1,7 +1,7 @@
 {
-  "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "index": "Introduction à MongoDB",
+  "installation": "Installation",
+  "nosql": "Présentation de NoSQL",
   "about": {
     "title": "About",
     "type": "page"
