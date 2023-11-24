@@ -1,7 +1,11 @@
 {
   "index": "Introduction à MongoDB",
   "installation": "Installation",
-  "nosql": "Présentation de NoSQL",
+  "nosql": "NoSQL",
+  "mongo": "Fondamentaux MongoDB",
+  "modelisation": "Modélisation",
+  "crud": "CRUD",
+  "avance": "Avancées",
   "about": {
     "title": "About",
     "type": "page"
@@ -11,5 +15,6 @@
     "type": "page",
     "href": "https://twitter.com/shuding_",
     "newWindow": true
-  }
+  },
+  "ressources": "Ressources"
 }
