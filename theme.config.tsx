@@ -1,18 +1,33 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
+import { MongoLogo } from './components/SvgIcons'
 
 const config: DocsThemeConfig = {
-  logo: <span>Mongo</span>,
+  docsRepositoryBase: "https://github.com/micmc422/mongo-cours",
+  logo: <MongoLogo style={{ height: "48px" }} />,
+  sidebar: {
+    defaultMenuCollapseLevel: 1
+  },
+  search: {
+    placeholder: "Chercher dans le cours",
+    emptyResult: "Aucun résultat",
+    error: "Oups petit probléme... réessayez",
+    loading: "Recherche en cours"
+  },
+  editLink:{text: null},
+  toc:{title: "Sur cette page"},
+  feedback:{
+    content: "Une question ou un problème ?",
+  },
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: 'https://codesandbox.io/p/devbox/mongodb-tp-tw3-xlc6vr?file=%2Futil%2Fmongodb.js%3A8%2C1',
+    icon: <svg className="feather feather-codesandbox" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><polyline points="7.5 4.21 12 6.81 16.5 4.21" /><polyline points="7.5 19.79 7.5 14.6 3 12" /><polyline points="21 12 16.5 14.6 16.5 19.79" /><polyline points="3.27 6.96 12 12.01 20.73 6.96" /><line x1="12" x2="12" y1="22.08" y2="12" /></svg>
   },
-  chat: {
-    link: 'https://discord.com',
-  },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
   footer: {
-    text: 'Nextra Docs Template',
+    text: 'Champollion - TW3 - Mongo - Bardy Michaël',
   },
+  gitTimestamp: ({ timestamp }) => <>Dernière mise à jour {timestamp.toLocaleDateString()}</>
 }
 
 export default config
+

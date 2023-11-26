@@ -7,14 +7,13 @@
   "crud": "CRUD",
   "avance": "Avancées",
   "about": {
-    "title": "About",
+    "title": "À propos",
     "type": "page"
   },
   "contact": {
     "title": "Contact ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
-    "newWindow": true
+    "href": "mailto:michael.bardy@occitaweb.fr"
   },
   "ressources": "Ressources"
 }
