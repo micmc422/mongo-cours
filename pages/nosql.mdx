@@ -49,33 +49,54 @@ Ici, nous avons un document représentant un utilisateur avec des informations p
 
 Les opérations CRUD (Create, Read, Update, Delete) sont fondamentales dans MongoDB.
 
-```js
-console.log('hello, world')
-```
 - **Create (Insertion) :**
 
-```js
+```js copy
   db.etudiants.insertOne({ "_id": 2, "nom": "Étudiant2", "matières": ["Chimie", "Biologie"] });
 ```
 
 - **Read (Lecture) :**
 
-```js
+```js copy
   db.etudiants.find({ "matières": "Informatique" });
 ```
+ Vous n'obtenez aucun résultat et c'est normal aucun étudiant n'est inscrit en informatique. 
+ Changez par `{"matières" : "Chimie"}`
 
 - **Update (Mise à Jour) :**
 
-```js
+```js copy
   db.etudiants.updateOne({ "nom": "Étudiant1" }, { $addToSet: { "matières": "Chimie" } });
 ```
+``` json
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+```
+Chacun des champs dans cette réponse fournit des informations spécifiques sur le résultat de l'opération. Voici une explication détaillée de chaque champ :
+
+1. **`acknowledged: true` :** Ce champ indique que le serveur MongoDB a bien reçu et traité la demande. Si la valeur est `true`, cela signifie que l'opération a été effectuée avec succès.
+
+2. **`insertedId: null` :** Ce champ indique l'identifiant du document inséré lors d'une opération d'insertion. Dans ce cas, la valeur est `null`, ce qui suggère qu'aucun document n'a été inséré lors de l'opération.
+
+3. **`matchedCount: 0` :** Ce champ représente le nombre de documents correspondant aux critères de recherche spécifiés dans la requête de mise à jour. Dans ce cas, la valeur est `0`, indiquant qu'aucun document existant n'a été trouvé qui correspond aux critères de mise à jour.
+
+4. **`modifiedCount: 0` :** Ce champ indique le nombre de documents effectivement modifiés lors de l'opération de mise à jour. La valeur `0` signifie qu'aucun document n'a été modifié, car aucun document correspondant n'a été trouvé.
+
+5. **`upsertedCount: 0` :** Ce champ concerne les opérations d'upsert, qui consistent à mettre à jour un document s'il existe ou à l'insérer s'il n'existe pas. La valeur `0` suggère qu'aucune opération d'upsert n'a été effectuée lors de cette opération.
+
+En résumé, la réponse indique que l'opération de mise à jour a été exécutée avec succès, mais qu'aucun document existant n'a été trouvé et donc aucun document n'a été modifié. Les champs tels que `insertedId` et `upsertedCount` indiquent également qu'aucun document n'a été inséré ou upserté pendant cette opération spécifique.
 
 - **Delete (Suppression) :**
 
-```js
+```js copy
   db.etudiants.deleteOne({ "nom": "Étudiant2" });
 ```
 
-<Callout type="info" emoji="ℹ️">
+## Conclusion
+
 NoSQL, offre une alternative puissante aux bases de données relationnelles traditionnelles. Sa flexibilité, son évolutivité et sa capacité à gérer des données non-structurées en font un choix populaire pour diverses applications.
-</Callout>

@@ -1,3 +1,5 @@
+import { Tabs } from 'nextra/components'
+ 
 # Utilisation du Shell MongoDB
 
 Le shell MongoDB est une interface en ligne de commande qui vous permet d'interagir avec votre base de données MongoDB. Voici quelques commandes et opérations de base pour vous familiariser avec l'utilisation du shell MongoDB.
@@ -6,38 +8,51 @@ Le shell MongoDB est une interface en ligne de commande qui vous permet d'intera
 
 1. **Démarrer le Shell :**
    - Ouvrez un terminal et exécutez la commande suivante pour accéder au shell MongoDB :
-     ```bash
+<Tabs items={['docker', 'local']}>
+  <Tabs.Tab>
+    ```bash copy
+    docker exec -it mon-container-mongodb bash
+     ```
+     puis :
+    ```bash copy
+    mongosh
+     ```
+  </Tabs.Tab>
+  <Tabs.Tab>
+    ```bash copy
      mongo
      ```
+</Tabs.Tab>
+</Tabs>
 
 ### Opérations CRUD dans le Shell MongoDB
 
 1. **Création (Insertion) :**
    - Insérer un nouveau document dans une collection :
-     ```javascript
+     ```javascript copy
      db.ma_collection.insertOne({ "nom": "John Doe", "age": 25, "ville": "Villebourg" });
      ```
 
 2. **Lecture (Read) :**
    - Lire tous les documents d'une collection :
-     ```javascript
+     ```javascript copy
      db.ma_collection.find();
      ```
 
    - Lire un document spécifique en fonction d'un critère :
-     ```javascript
+     ```javascript copy
      db.ma_collection.find({ "ville": "Villebourg" });
      ```
 
 3. **Mise à Jour (Update) :**
    - Mettre à jour un document existant dans une collection :
-     ```javascript
+     ```javascript copy
      db.ma_collection.updateOne({ "nom": "John Doe" }, { $set: { "age": 26 } });
      ```
 
 4. **Suppression (Delete) :**
    - Supprimer un document en fonction d'un critère :
-     ```javascript
+     ```javascript copy
      db.ma_collection.deleteOne({ "nom": "John Doe" });
      ```
 

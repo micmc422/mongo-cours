@@ -5,7 +5,7 @@ L'administration d'une base de données MongoDB est une tâche essentielle pour 
 
 ## Surveillance des Performances
 
-La surveillance régulière des performances est cruciale pour identifier les goulots d'étranglement, les pics d'activité, et les tendances à long terme. Nous examinerons les outils intégrés tels que MongoDB Profiler et MongoDB Cloud Manager, vous permettant de recueillir des informations précieuses sur l'utilisation des ressources et les temps de réponse.
+La surveillance régulière des performances est cruciale pour identifier les goulots d'étranglement, les pics d'activité, et les tendances à long terme. Mongo propose des outils intégrés tels que MongoDB Profiler et MongoDB Cloud Manager, vous permettant de recueillir des informations précieuses sur l'utilisation des ressources et les temps de réponse.
 
 ```bash
 # Activation du Profiler pour surveiller les opérations
@@ -14,7 +14,7 @@ db.setProfilingLevel(1);
 
 ## Sauvegarde et Restauration
 
-La sauvegarde régulière de votre base de données est impérative pour la récupération en cas de défaillance du système. Nous discuterons des méthodes de sauvegarde, y compris l'utilisation de `mongodump`, et des meilleures pratiques pour la restauration.
+La sauvegarde régulière de votre base de données est impérative pour la récupération en cas de défaillance du système.
 
 ```bash
 # Utilisation de mongodump pour sauvegarder la base de données
@@ -38,5 +38,3 @@ Nous aborderons les stratégies d'évolutivité horizontale et verticale, ainsi 
 // Configuration d'un ensemble de réplication pour la haute disponibilité
 rs.initiate();
 ```
-
-Ce chapitre vise à vous fournir les connaissances nécessaires pour administrer efficacement votre base de données MongoDB, assurant ainsi sa stabilité, ses performances optimales et sa disponibilité continue.

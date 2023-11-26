@@ -29,7 +29,11 @@
 Une fois le conteneur en cours d'exécution, vous pouvez vous connecter au shell MongoDB à l'intérieur du conteneur avec la commande :
 
 ```bash copy
-docker exec -it mon-container-mongodb mongo    
+docker exec -it mon-container-mongodb bash  
 ```     
+Vous pourrez ensuite lancé le shell mongo pour commencer à interagir avec mongo.
 
-Vous êtes maintenant prêt à utiliser MongoDB dans un environnement isolé à l'université, en exploitant Docker comme plateforme de virtualisation légère. N'hésitez pas à me faire savoir si vous avez des questions supplémentaires ou si quelque chose n'est pas clair !
+```bash copy
+mongosh  
+```   
+Vous êtes maintenant prêt à utiliser MongoDB dans un environnement isolé à l'université.
