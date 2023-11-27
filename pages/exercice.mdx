@@ -161,6 +161,19 @@ app.post('/addData', async (req, res) => {
 });
 // ... (autres routes)
 ```
+
+```mermaid
+flowchart TD
+    A[Formulaire] -->|"envoi des données"| B("sendData()")
+    B -->|/endpoint| C{Express}
+    C -->|connu| D[MongoClient]
+    C -->|inconnu| E[Error]
+    D -->|Requête| F[MongoDB]
+    F -->|Réponse| C{Express} 
+    C -->|Retourne la réponse| A{Formulaire} 
+```
+
+
 ## Objectifs
 
 Développer le projet créé en utilisant deux documents (cf: [modélisation](/modelisation/modelisation)) :
