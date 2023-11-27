@@ -1,23 +1,22 @@
-# Nextra Docs Template 
+# TW3 MongoDB 
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+Créer avec [Nextra](https://nextra.site).
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+Technologie web - licence 3 - Champollion - MongoDB
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
+[**Accéder au cours →**](https://mongo-cours.vercel.app/)
 
-## Quick Start
+[![](public/database.jpg)](https://mongo-cours.vercel.app/)
 
-Click the button to clone this repository and deploy it on Vercel:
+## Posez vos questions
 
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
+Vous pouvez posez vos questions dans [issues](https://github.com/micmc422/mongo-cours/issues). 
 
-## Local Development
+## Exercice
 
-First, run `pnpm i` to install the dependencies.
+Le codeSandbox de l'exercice est accesible [ici](https://codesandbox.io/p/github/micmc422/MongoDB-TP-TW3). 
+Vous allez en créer un pendant le cours il est juste disponible pour références ne le cloner pas !
 
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
-
-## License
-
-This project is licensed under the MIT License.
+## Auteur
+Bardy Michaël
+Réutilisation non autorisé.
